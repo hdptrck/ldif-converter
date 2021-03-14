@@ -77,8 +77,7 @@ function convertCSVtoLDIF(string $csvFile, string $ldifFile, string $passwordFil
     foreach ($arr_readUsers as $user) {
         $arr_tempUser = [];
 
-        //$password = generatePassword();
-        $password = 123;
+        $password = generatePassword();
         $encryptedPassword = "{SHA}" . base64_encode(pack("H*", sha1($password)));
 
         // Find Duplicate
