@@ -1,0 +1,36 @@
+.btn {
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: #335eea;
+}
+
+.btn-primary:focus,
+.btn-primary:hover {
+    background-color: #1746e0;
+}
+
+.btn-primary-soft {
+    background-color: #335eea1a;
+    color: #335eea;
+}
+
+.btn-primary-soft:focus,
+.btn-primary-soft:hover {
+    background-color: #335eea26;
+    color: #335eea;
+}
+
+.btn-success {
+    background-color: #42ba96;
+}
+
+.btn-success:focus,
+.btn-success:hover {
+    background-color: #389e7f;
+}
+
+.btn:not([class*=btn-outline]) {
+    border-color: transparent!important;
+}

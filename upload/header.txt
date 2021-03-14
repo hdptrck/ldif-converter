@@ -1,0 +1,70 @@
+# String  X.500 AttributeType
+# ------------------------------
+# CN      commonName
+# L       localityName
+# ST      stateOrProvinceName
+# O       organizationName
+# OU      organizationalUnitName
+# C       countryName
+# STREET  streetAddress
+# DC      domainComponent
+# UID     userid
+
+#gertzenstein.local
+dn: dc=gertzenstein,dc=local
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+o: gertzenstein local
+dc: gertzenstein
+
+dn: ou=Geraete,dc=gertzenstein,dc=local
+ou: Geraete
+objectClass: top
+objectClass: organizationalUnit
+
+dn: ou=Benutzer,dc=gertzenstein,dc=local
+ou: Benutzer
+objectClass: top
+objectClass: organizationalUnit
+
+dn: ou=Gruppen,dc=gertzenstein,dc=local
+ou: Gruppen
+objectClass: top
+objectClass: organizationalUnit
+
+dn: ou=Deaktiviert,dc=gertzenstein,dc=local
+ou: Deaktiviert
+objectClass: top
+objectClass: organizationalUnit
+
+#Sub OU
+dn: ou=Schueler,ou=Benutzer,dc=gertzenstein,dc=local
+ou: Schueler
+objectClass: top
+objectClass: organizationalUnit
+
+dn: ou=Lehrpersonen,ou=Benutzer,dc=gertzenstein,dc=local
+ou: Lehrpersonen
+objectClass: top
+objectClass: organizationalUnit
+
+dn: ou=Administration,ou=Benutzer,dc=gertzenstein,dc=local
+ou: Administration
+objectClass: top
+objectClass: organizationalUnit
+
+#Gruppe
+dn: cn=bg_deaktivierte-benutzer,ou=Gruppen,dc=gertzenstein,dc=local
+objectClass: posixGroup
+objectClass: top
+cn: bg_deaktivierte-benutzer
+gidNumber: 10000
+description: Deaktivierte Benutzer
+
+dn: cn=bg_alle-benutzer,ou=Gruppen,dc=gertzenstein,dc=local
+objectClass: posixGroup
+objectClass: top
+cn: bg_alle-benutzer
+gidNumber: 10001
+description: Alle Benutzer
